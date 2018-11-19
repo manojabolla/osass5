@@ -1,10 +1,10 @@
 all: oss user
 
-oss: oss.c
-	gcc oss.c -o oss -lrt -lpthread
-	
-user: user.c
-	gcc user.c -o user -lrt -lpthread
-	
+oss: oss.c common.h
+	gcc oss.c -o oss
+
+user: user.c common.h 
+	gcc user.c -o user
+
 clean:
-	rm -f oss user 
+	rm -f user oss *.o oss.log
