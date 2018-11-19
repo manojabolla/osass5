@@ -1,0 +1,49 @@
+###########  Resource Management   ###################
+
+#### Build Command:
+```
+make
+```
+
+#### Run Command:
+```    
+./oss
+```
+
+#### Clean Command:
+```
+make clean
+```
+
+#### Log File:
+```
+oss.log
+```
+
+#### Log Output Format:
+
+Master has detected Process P0 requesting R2 at time xxx:xxx
+Master granting P0 request R2 at time xxx:xxx
+Master has acknowledged Process P0 releasing R2 at time xxx:xxx
+Current system resources
+R0 R1 R2 R3 ...
+P0 2 1 3 4 ...
+P1 0 1 1 0 ...
+P2 3 1 0 0 ...
+P3 7 0 1 1 ...
+P4 0 0 3 2 ...
+P7 1 2 0 5 ...
+Master has detected Process P7 requesting R3 at time xxx:xxxx
+Master blocking P7 for requesting R3 at time xxx:xxx
+...
+Master has acknowledged Process P0 releasing R2 at time xxx:xxx
+Master unblocking P7 and granting it R3 at time xxx:xxxx
+R0 R1 R2 R3 ...
+P0 2 1 2 4 ...
+P1 0 1 1 0 ...
+P2 3 1 0 0 ...
+P3 7 0 1 1 ...
+P4 0 0 3 2 ...
+P7 1 2 0 6 ...
+
+
